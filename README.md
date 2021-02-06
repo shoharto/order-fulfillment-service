@@ -1,7 +1,5 @@
-# order-fulfillment-service
 
-
-# Deliverables
+# Order Fulfillment Service
 
 - Precise problem statement
 - High level spec: flow chart, block diagrams etc.
