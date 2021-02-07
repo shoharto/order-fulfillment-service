@@ -4,7 +4,7 @@ info:
   version: "1.0.0"
   title: "Order system: Fuilfilment Service"
   
-host: "petstore.swagger.io"
+host: "http://localhost:3000/api-docs/"
 basePath: "/v2"
 tags:
 - name: "Fulfilment"
@@ -20,9 +20,9 @@ paths:
     post:
       tags:
       - "fullfilment"
-      summary: "Add a new pet to the store"
+      summary: "delivery product"
       description: ""
-      operationId: "addPet"
+      operationId: "delivery"
       consumes:
       - "application/json"
       - "application/xml"
@@ -32,10 +32,10 @@ paths:
       parameters:
       - in: "body"
         name: "body"
-        description: "Pet object that needs to be added to the store"
+        description: "Delivery object that needs to be added to the service"
         required: true
         schema:
-          $ref: "#/definitions/Pet"
+          $ref: "#/definitions/Delivery"
       responses:
         "405":
           description: "Invalid input"
@@ -50,9 +50,9 @@ paths:
     post:
       tags:
       - "fullfilment"
-      summary: "Add a new pet to the store"
+      summary: "Add a delivery method"
       description: ""
-      operationId: "addPet"
+      operationId: "delivery"
       consumes:
       - "application/json"
       - "application/xml"
@@ -62,10 +62,10 @@ paths:
       parameters:
       - in: "body"
         name: "body"
-        description: "Pet object that needs to be added to the store"
+        description: "Delivery method object that needs to be added"
         required: true
         schema:
-          $ref: "#/definitions/Pet"
+          $ref: "#/definitions/DeliveryVendor"
       responses:
         "405":
           description: "Invalid input"
@@ -80,9 +80,9 @@ paths:
     post:
       tags:
       - "fullfilment"
-      summary: "Add a new pet to the store"
+      summary: "cancel order after or before delivery"
       description: ""
-      operationId: "addPet"
+      operationId: "delivery"
       consumes:
       - "application/json"
       - "application/xml"
@@ -92,10 +92,10 @@ paths:
       parameters:
       - in: "body"
         name: "body"
-        description: "Pet object that needs to be added to the store"
+        description: "Cancel order object that needs to be added "
         required: true
         schema:
-          $ref: "#/definitions/Pet"
+          $ref: "#/definitions/Cancellation"
       responses:
         "405":
           description: "Invalid input"
@@ -198,7 +198,7 @@ definitions:
         type: "integer"
         format: "int64"
       category:
-        $ref: "#/definitions/Category"
+        $ref: "#/definitions/Delivery"
       name:
         type: "string"
         example: "doggie"
@@ -215,10 +215,10 @@ definitions:
           name: "tag"
           wrapped: true
         items:
-          $ref: "#/definitions/Tag"
+          $ref: "#/definitions/Cancellation"
       status:
         type: "string"
-        description: "pet status in the store"
+        description: " status "
         enum:
         - "available"
         - "pending"
