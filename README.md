@@ -13,6 +13,7 @@ In our order management system we've four services. There are order service, pay
 │   │   └── Block Diagram.jpeg
 │   ├── lld
 │   │   └── ERD.jpeg
+│   │   └── Secquence Diagram.jpeg
 │   ├── solution-brief.md
 │   └── stack.md
 └── README.md
